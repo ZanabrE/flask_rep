@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask import request
 from flask import make_response
 from flask import redirect
@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return redirect('http://www.example.com')
+    return render_template('index.html')
 
 @app.route('/user/<name>')
 def user(name):
