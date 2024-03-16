@@ -3,8 +3,10 @@ from flask import request
 from flask import make_response
 from flask import redirect
 from flask import abort
+from flask.exe.bootstrap import Bootstrap
 
 app = Flask(__name__)
+bootstrap = Bootstrap(app)
 
 @app.route('/')
 def index():
