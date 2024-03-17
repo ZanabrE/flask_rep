@@ -3,7 +3,9 @@ from flask import request
 from flask import make_response
 from flask import redirect
 from flask import abort
-from flask.boostrap import Bootstrap
+from flask_boostrap import Bootstrap
+
+Bootstrap(app)
 
 app = Flask(__name__)
 
