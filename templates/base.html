@@ -1,12 +1,9 @@
 <html>
 <head>
-    {% block head %}
-    <title>{% block title %}{% endblock %} - My appliaction</title>
-    {% endblock %}
+    {% block title %}My Application{% endblock %}
 </head>
 <body>
     {% extends "base.html" %}
-    {% block title %}Index{% endblock %}
     {% block head %}
         {{ super() }}
         <style>
