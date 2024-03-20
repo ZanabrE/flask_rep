@@ -6,7 +6,6 @@ from flask import abort
 from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
-#app = Flask(__main__)
 
 @app.route('/index')
 def index():
