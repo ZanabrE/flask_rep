@@ -13,7 +13,11 @@ def index():
 
 @app.route('/login', methods=["POST", "GET"])
 def login():
-    return render_template('login.html')
+    if request.method == 'POST':
+        user = request.form['email']
+        return redirect(url_for('user', name=user))
+    else:
+        return render_template('login.html')
 
 @app.route('/user/<name>')
 def user(name):
