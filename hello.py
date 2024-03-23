@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 from flask import request
 from flask import make_response
 from flask import redirect
@@ -14,7 +14,7 @@ def index():
 @app.route('/login', methods=["POST", "GET"])
 def login():
     if request.method == 'POST':
-        user = request.form['emailHelp']
+        user = request.form['email']
         return redirect(url_for('user', name=user))
     else:
         return render_template('login.html')
