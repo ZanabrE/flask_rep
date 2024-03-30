@@ -6,6 +6,7 @@ from flask import abort
 from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
+app.config['SECRET KEY'] = 'hard to guess string'
 
 @app.route('/index')
 def index():
