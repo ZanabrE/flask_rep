@@ -20,7 +20,7 @@ def login():
     else:
         return render_template('login.html')
 
-@pp.route('/register')
+@app.route('/register')
 def register():
     return render_template('register.html')
 
