@@ -20,9 +20,13 @@ def login():
     else:
         return render_template('login.html')
 
-@app.route('/register')
+@app.route('/register', methods=["POST", "GET"])
 def register():
-    return render_template('register.html')
+    if request.method == 'POST':
+        user = request.form['name']
+        return redirect(url_for('user', name=user))
+    else:
+        return render_template('register.html')
 
 @app.route('/user/<name>')
 def user(name):
