@@ -20,6 +20,10 @@ def login():
     else:
         return render_template('login.html')
 
+@pp.route('/register')
+def register():
+    return render_template('register.html')
+
 @app.route('/user/<name>')
 def user(name):
     return render_template('user.html', name=name)
