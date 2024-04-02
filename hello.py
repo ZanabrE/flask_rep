@@ -30,7 +30,7 @@ def register():
 
 @app.route('/user/<name>')
 def user(name):
-    return render_template('user.html', name=name)
+    return render_template('index.html', name=name)
 
 @app.route('/user/<id>')
 def get_user(id):
