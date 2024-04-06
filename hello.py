@@ -28,6 +28,10 @@ def register():
     else:
         return render_template('register.html')
 
+@app.route('/workout_1')
+def workout_1():
+    return render_template('workout_1.html')
+    
 @app.route('/user/<name>')
 def user(name):
     return render_template('index.html', name=name)
