@@ -31,7 +31,15 @@ def register():
 @app.route('/workout_1')
 def workout_1():
     return render_template('workout_1.html')
-    
+
+@app.route('/workout_2')
+def workout_2():
+    return render_template('workout_2.html')
+
+@app.route('/workout_3')
+def workout_3():
+    return render_template('workout_3.html')
+
 @app.route('/user/<name>')
 def user(name):
     return render_template('index.html', name=name)
