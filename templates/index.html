@@ -4,12 +4,18 @@
 
 {% block content %}
 <div class="container min-vh-100 d-flex justify-content-center align-items-center">
-    <div class="page-header">
-        <h1>Welcome to Motion</h1>
-        <p>On this three month program you will experience changes in your body
-            with a good diet and determination any individual will successed in 
-            this program.
-        </p>
-    </div>
+    <span class="p-4 bg-info bg-opacity-10 border border-info rounded">
+        <div class="page-header">
+            <h1>Welcome to Motion</h1>
+            <h2>Hello, {{name}}</h2>
+            <p>On this three month program you will experience changes in your body
+                with a good diet and determination any individual will successed in 
+                this program.
+                On the workouts dropdown select the month to start your progem and 
+                will take you to a page with workouts according to a day and each 
+                day will an individual will work one part of their body.
+            </p>
+        </div>
+    </span>
 </div>
 {% endblock %}
