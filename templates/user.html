@@ -7,24 +7,29 @@
     <div class="page-header">
         <h1>Welcome, {{ name }}</h1>
         <hr class="divider">
+        <p>This application was created for those individuals that are trying something new or 
+            probably include in their routine this is a three month exercises that will make 
+            any one find their true self after this three month workout it is recommended to 
+            take a week off then start all over again. Below 
+        </p>
 
-        <div class="container-fluid mt-5 justify-content">
+        <div class="container-fluid mt-5">
             <div class="row">
-                <div class="col">
+                <div class="col text-center">
                     <p class="text-center">MONTH 1</p>
-                    <a class="justify-content-center text-center" href="{{ url_for('workout_1') }}">
+                    <a class="justify-content-center" href="{{ url_for('workout_1') }}">
                         <img src="/static/weightlifting.png" class="img-fluid p-3 bg-info bg-opacity-10 border rounded text-white" style="width:300px; height:300px" alt="weightlifting"/></a>
                 </div>
                 
-                <div class="col">
+                <div class="col text-center">
                     <p class="text-center">MONTH 2</p>
                     <a class="justify-content-center" href="{{ url_for('workout_2') }}">
                         <img src="/static/two.png" class="img-fluid p-3 bg-info bg-opacity-10 border rounded" style="width:300px; height:300px" alt="two"></a>
                 </div>
                 
-                <div class="col">
+                <div class="col text-center">
                     <p class="text-center">MONTH 3</p>
-                    <a class="justify-content-center text-center" href="{{ url_for('workout_3') }}">
+                    <a class="justify-content-center" href="{{ url_for('workout_3') }}">
                         <img src="/static/muscle.png" class="img-fluid p-3 bg-info bg-opacity-10 border rounded" style="width:300px; height:300px" alt="muscle"></a>
                 </div>
             </div>
