@@ -14,7 +14,7 @@
 {% block navbar %}
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="{{ url_for('index') }}"><img src="/static/dumbbell.png" alt="dumbbell" width="40" height="34">Flasky</a>
+      <a class="navbar-brand" href="{{ url_for('index') }}"><img src="/static/dumbbell.png" alt="dumbbell" width="40" height="34"> Flasky</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -28,12 +28,13 @@
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Workouts
+              Tunes
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{{ url_for('workout_1') }}">Month 1</a></li>
-              <li><a class="dropdown-item" href="{{ url_for('workout_2') }}">Month 2</a></li>
-              <li><a class="dropdown-item" href="{{ url_for('workout_3') }}">Month 3</a></li>
+              <li><a class="dropdown-item" href="https://open.spotify.com/"><img class="img-fluid border rounded" src="/static/spotify.png" alt="Spotify" width="34" height="34"/> Spotify</a></li>
+              <li><a class="dropdown-item" href="https://music.apple.com/"><img class="img-fluid border rounded" src="/static/itunes.png" alt="Apple Music" width="34" height="34"/> Apple Music</a></li>
+              <li><a class="dropdown-item" href="https://soundcloud.com/"><img class="img-fluid border rounded" src="/static/soundcloud.png" alt="Sound Cloud" width="34" height="34"/> Sound Cloud</a></li>
+              <li><a class="dropdown-item" href="https://www.di.fm/"><img class="img-fluid border rounded" src="/static/di.fm-radio.png" alt="DI.FM Radio" width="34" height="34"/> DI.FM Radio</a></li>
             </ul>
           </li>
         </ul>
