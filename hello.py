@@ -28,9 +28,13 @@ def register():
     else:
         return render_template('register.html')
 
-@app.route('/workout_1')
+@app.route('/workout_1', methods=["POST", "GET"])
 def workout_1():
-    return render_template('workout_1.html')
+    if request.method == 'POST':
+        user = request.form['name']
+        return redirect(url_for('user', name=user))
+    else:
+        return render_template('workout_1.html')
 
 @app.route('/workout_2')
 def workout_2():
