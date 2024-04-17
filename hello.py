@@ -24,14 +24,14 @@ def login():
 def register():
     if request.method == 'POST':
         user = request.form['name']
-        return redirect(url_for('user', name=user))
+        return redirect(url_for('user'))
     else:
         return render_template('register.html')
 
 @app.route('/workout_1', methods=["POST", "GET"])
 def workout_1():
     if request.method == 'POST':
-        user = request.form['button']
+        user = request.form['name']
         return redirect(url_for('user', name=user))
     else:
         return render_template('workout_1.html')
