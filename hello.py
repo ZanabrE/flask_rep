@@ -32,13 +32,17 @@ def register():
 def workout_1():
     if request.method == 'POST':
         user = request.form['name']
-        return redirect(url_for('user', name=user))
+        return redirect(url_for('user'))
     else:
         return render_template('workout_1.html')
 
-@app.route('/workout_2')
+@app.route('/workout_2', methods=["POST", "GET"])
 def workout_2():
-    return render_template('workout_2.html')
+    if request.method == 'POST':
+        user = request.form['name']
+        return redirect(url_for('user'))
+    else:
+        return render_template('workout_2.html')
 
 @app.route('/workout_3')
 def workout_3():
