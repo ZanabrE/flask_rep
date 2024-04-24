@@ -16,14 +16,18 @@ def index():
 def login():
     if request.method == 'POST':
         name = request.form['name']
-        return redirect(url_for('user', name=name))
+        session["name"] = name
+        flash("Login Successful!")
+        return redirect(url_for('user'))
     else:
+        if "name" in session:
+            return redirect(url_for('user'))
         return render_template('login.html')
 
 @app.route('/register', methods=["POST", "GET"])
 def register():
     if request.method == 'POST':
-        user = request.form['name']
+        name = request.form['name']
         return redirect(url_for('user'))
     else:
         return render_template('register.html')
@@ -31,7 +35,7 @@ def register():
 @app.route('/workout_1', methods=["POST", "GET"])
 def workout_1():
     if request.method == 'POST':
-        user = request.form['name']
+        name = request.form['name']
         return redirect(url_for('user'))
     else:
         return render_template('workout_1.html')
@@ -39,7 +43,7 @@ def workout_1():
 @app.route('/workout_2', methods=["POST", "GET"])
 def workout_2():
     if request.method == 'POST':
-        user = request.form['name']
+        name = request.form['name']
         return redirect(url_for('user'))
     else:
         return render_template('workout_2.html')
